@@ -1,0 +1,24 @@
+ ┌───────────────────────────────────────────────┐
+ │                  Client (Angular)             │
+ │  - Composants (Components)                    │
+ │  - Services (HttpClient)                      │
+ │  - Routing                                    │
+ │  - Formulaires / UI                           │
+ └───────────────────────▲───────────────────────┘
+                         │ HTTP (REST API, JSON)
+                         │
+ ┌───────────────────────┴───────────────────────┐
+ │               Serveur Node.js + Express        │
+ │  - Routing API (GET/POST/PUT/DELETE)           │
+ │  - Contrôleurs                                 │
+ │  - Middleware (authentification, logs…)        │
+ │  - Gestion des erreurs                         │
+ └───────────────────────▲───────────────────────┘
+                         │ Drivers MongoDB/Mongoose
+                         │
+ ┌───────────────────────┴───────────────────────┐
+ │                 Base de données MongoDB        │
+ │  - Collections                                 │
+ │  - Documents JSON                              │
+ │  - Gestion via Mongoose (schémas & modèles)    │
+ └───────────────────────────────────────────────┘

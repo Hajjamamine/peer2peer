@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Loterie en temps réel</title>
+</head>
+<body>
+    <h1>Loterie en temps réel 🎉</h1>
+
+    <input id="nom" type="text" placeholder="Votre nom">
+    <button onclick="jouer()">Jouer</button>
+
+    <h2 id="message"></h2>
+
+    <!-- Charger Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+
+        function jouer() {
+            const nom = document.getElementById("nom").value;
+            socket.emit("jouer", nom);
+        }
+
+        socket.on("resultat", (data) => {
+            document.getElementById("message").innerHTML =
+                `Bonjour <strong>${data.nom}</strong> !<br>
+                Vous avez gagné <strong>${data.gain} €</strong> 🎉`;
+        });
+    </script>
+</body>
+</html>
