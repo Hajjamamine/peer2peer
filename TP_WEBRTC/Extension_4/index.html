@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebRTC Vidéoconférence</title>
+    <style>
+        video { width: 300px; height: 200px; margin: 5px; border: 1px solid black; }
+        #videos { display: flex; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <h1>WebRTC Vidéoconférence (multipartite)</h1>
+
+    <div id="videos">
+        <video id="localVideo" autoplay muted></video>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/videoClient.js"></script>
+</body>
+</html>

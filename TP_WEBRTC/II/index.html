@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DataChannel Example</title>
+</head>
+<body>
+<h1>DataChannel Demo</h1>
+
+<p>Texte à envoyer :</p>
+<textarea rows="5" cols="50" id="dataChannelSend" disabled
+placeholder="1: Press Start; 2: Enter text; 3: Press Send."></textarea>
+
+<p>Texte reçu :</p>
+<textarea rows="5" cols="50" id="dataChannelReceive" disabled></textarea>
+
+<div id="buttons">
+<button id="startButton">Start</button>
+<button id="sendButton">Send</button>
+<button id="closeButton">Stop</button>
+</div>
+
+<!-- Choisir l’implémentation -->
+<!-- <script src="js/dataChannel.js"></script> --->
+<script src="js/dataChannelWebSocket.js"></script> 
+</body>
+</html>
